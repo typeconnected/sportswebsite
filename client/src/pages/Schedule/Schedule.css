@@ -1,0 +1,104 @@
+.schedule-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-chip:hover { border-color: var(--accent-green); color: var(--text-primary); }
+.filter-chip.active { background: var(--accent-green); color: #000; border-color: var(--accent-green); font-weight: 700; }
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.schedule-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+
+.schedule-card:hover {
+  border-color: var(--accent-green);
+  transform: translateX(4px);
+}
+
+.schedule-sport-icon {
+  font-size: 36px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.schedule-info { flex: 1; }
+
+.schedule-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-primary);
+}
+
+.schedule-meta {
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.schedule-teams {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.vs { color: var(--text-muted); font-weight: 400; }
+
+.schedule-time {
+  text-align: right;
+  flex-shrink: 0;
+  min-width: 120px;
+}
+
+.schedule-date { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+.schedule-clock { font-size: 18px; font-weight: 700; color: var(--text-primary); font-family: 'Rajdhani', sans-serif; }
+.time-until { font-size: 12px; color: var(--accent-green); margin-top: 4px; }
+
+.remind-btn { flex-shrink: 0; font-size: 13px; }
+
+@media (max-width: 600px) {
+  .schedule-card { flex-wrap: wrap; }
+  .schedule-time { text-align: left; }
+  .remind-btn { width: 100%; justify-content: center; }
+}
